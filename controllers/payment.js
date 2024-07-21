@@ -30,7 +30,7 @@ module.exports = {
       app_time: Date.now(), // miliseconds
       item: JSON.stringify(items),
       embed_data: JSON.stringify(embed_data),
-      amount: 50000, // tuỳ vào body nhận được từ client
+      amount: req.body.amount, // tuỳ vào body nhận được từ client
       //khi thanh toán xong, zalopay server sẽ POST đến url này để thông báo cho server của mình
       //Chú ý: cần dùng ngrok để public url thì Zalopay Server mới call đến được
       callback_url: "https://b074-1-53-37-194.ngrok-free.app/callback",
